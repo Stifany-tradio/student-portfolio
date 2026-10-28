@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-pt-40 sm:scroll-pt-24">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stifany Tradio | Student Portfolio</title>
+    <meta name="description"
+        content="Stifany Tradio’s first-year IT portfolio: beginner web projects, class notes, and the skills she is learning.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+            --color-zero-black: #050505;
+            --color-ghost-green: #D7FFE4;
+            --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+            --font-mono: "JetBrains Mono", ui-monospace, monospace;
+        }
+
+        @layer components {
+            .nav-link {
+                @apply py-2 text-sm underline-offset-8 hover:underline;
+            }
+            .label {
+                @apply mb-4 font-mono text-sm text-zero-black/70;
+            }
+            .heading {
+                @apply text-3xl font-bold tracking-tight md:text-5xl;
+            }
+            .section {
+                @apply border-t border-zero-black/20 py-20;
+            }
+           .card {
+            @apply flex flex-col rounded-2xl border border-zero-black/20
+            bg-white/20 p-7
+            transition-all duration-300 ease-out
+            hover:-translate-y-2 hover:bg-white/30 hover:shadow-xl;
+        }
+            .meta {
+                @apply mb-3 text-sm text-zero-black/70;
+            }
+        }
+
+        html { scroll-behavior: smooth; }
+        a:focus-visible { outline: 3px solid currentColor; outline-offset: 5px; }
+
+        .skip-link {
+            position: fixed; z-index: 60; top: -80px; left: 20px; padding: 10px 16px;
+            background-color: var(--color-zero-black); color: var(--color-ghost-green);
+        }
+        .skip-link:focus { top: 10px; }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+        }
+    </style>
+</head>
+
+<body class="bg-ghost-green pt-36 font-sans leading-relaxed text-zero-black antialiased sm:pt-20">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header
+        class="fixed inset-x-0 top-0 z-50 h-36 border-b border-ghost-green/20 bg-zero-black/80 text-ghost-green backdrop-blur-lg sm:h-20">
+        <div class="mx-auto flex h-full max-w-6xl flex-wrap items-center justify-between gap-5 px-6 py-5">
+            <a class="text-2xl font-bold tracking-tight" href="#home">Stifany Tradio<span>.</span></a>
+            <nav class="flex w-full flex-wrap gap-6 sm:w-auto" aria-label="Main navigation">
+                <a class="nav-link" href="#home">Home</a>
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#skills">Skills</a>
+                <a class="nav-link" href="#projects">Projects</a>
+                <a class="nav-link" href="#contacts">Contacts</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main" class="mx-auto max-w-6xl px-6" tabindex="-1">
+
+        <!-- HOME -->
+        <section id="home" class="grid items-center gap-14 py-14 md:grid-cols-[1.2fr_1fr] md:py-24"
+            aria-label="Introduction">
+            <div>
+                <p class="label">BSIT-1C · Cordova Public College</p>
+                <h1 class="mb-6 text-5xl font-extrabold leading-[1.05] tracking-tight md:text-7xl">Hi, I’m
+                    Stifany.<br><span class="text-zero-black/55">New to IT.<br>Making a start.</span></h1>
+                <p class="max-w-xl text-lg text-zero-black/80">
+                    I’m learning how a web page goes from a blank file to something I can share. This is where I keep
+                    my class activities and small experiments.
+                </p>
+                <div class="mt-9 flex flex-wrap items-center gap-6">
+                    <a class="rounded-md bg-zero-black px-6 py-3.5 font-semibold text-ghost-green hover:bg-zero-black/85"
+                        href="#projects">See my projects</a>
+                    <a class="font-semibold underline underline-offset-8 hover:text-zero-black/70" href="#about">More
+                        about me</a>
+                </div>
+            </div>
+            <figure class="mx-auto w-full max-w-sm text-center">
+                <img class="aspect-square w-full rounded-full border-4 border-zero-black bg-zero-black/10 object-cover object-top"
+                    src="assets/images/stifanyprofilepic.jpg" alt="Photo of Stifany" width="600" height="600">
+                <figcaption class="mt-5">
+                    <span class="block font-bold">Stifany Tradio</span>
+                    <span class="block text-sm text-zero-black/70">First year · BSIT</span>
+                </figcaption>
+            </figure>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="section grid gap-12 md:grid-cols-2" aria-labelledby="about-title">
+            <div>
+                <p class="label">A little background</p>
+                <h2 id="about-title" class="heading mb-6">Figuring things out,<br>one lab session at a time.</h2>
+                <p class="mb-5 text-zero-black/80">
+                    I’m Stifany Tradio, a first-year Information Technology student at Cordova Public College. I chose
+                    IT
+                    because I wanted to make things on a computer, instead of only using what was already there.
+                </p>
+                <p class="mb-5 text-zero-black/80">
+                    I’m still at the beginning. Some days a layout works right away; other days I spend half an hour
+                    finding a missing closing tag. Both count as practice.
+                </p>
+                <p class="text-zero-black/80">
+                    After class, I listen to music, hang out with friends, and take photos around the city with my
+                    phone.
+                </p>
+            </div>
+            <div class="space-y-6">
+                <aside class="rounded-2xl bg-zero-black p-8 text-ghost-green">
+                    <p class="mb-5 font-mono text-sm text-ghost-green/70">My college chapter</p>
+                    <h3 class="mb-3 text-2xl font-bold">BS Information Technology</h3>
+                    <p class="mb-5 text-ghost-green/80">Cordova Public College<br>First year · 2026 — Present</p>
+                    <p class="border-t border-ghost-green/20 pt-5 text-sm text-ghost-green/80">Introduction to
+                        Computing, Computer Programming, and Web Development Fundamentals.</p>
+                </aside>
+                <p class="border-l-4 border-zero-black pl-4 text-zero-black/80">
+                    This year, I want to understand my code, build pages that work on any device, and ask better
+                    questions when I get stuck.
+                </p>
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="section" aria-labelledby="skills-title">
+            <div class="mb-12">
+                <p class="label">What I’m learning</p>
+                <h2 id="skills-title" class="heading">A small toolkit.<br>Plenty to practice.</h2>
+            </div>
+            <div class="grid gap-6 md:grid-cols-2">
+                <article class="card">
+                    <p class="meta">Page structure</p>
+                    <h3 class="mb-3 text-2xl font-bold">HTML5</h3>
+                    <p class="mb-5 text-zero-black/80">I use headings, lists, links, and images to give a page
+                        structure. I’m learning to make forms with clear labels, too.</p>
+                    <p class="mt-auto border-t border-zero-black/15 pt-4 text-sm text-zero-black/70">Headings · Lists ·
+                        Forms</p>
+                </article>
+                <article class="card">
+                    <p class="meta">Layout &amp; spacing</p>
+                    <h3 class="mb-3 text-2xl font-bold">CSS3</h3>
+                    <p class="mb-5 text-zero-black/80">The box model, Flexbox, and basic grids. I’m practicing how to
+                        make a layout fit both my laptop and my phone.</p>
+                    <p class="mt-auto border-t border-zero-black/15 pt-4 text-sm text-zero-black/70">Box model · Flexbox
+                        · Grid</p>
+                </article>
+                <article class="card">
+                    <p class="meta">Useful utilities</p>
+                    <h3 class="mb-3 text-2xl font-bold">Tailwind CSS</h3>
+                    <p class="mb-5 text-zero-black/80">Spacing, colors, and responsive utility classes. I’m getting used
+                        to reading the classes and understanding what each one changes.</p>
+                    <p class="mt-auto border-t border-zero-black/15 pt-4 text-sm text-zero-black/70">Spacing · Colors ·
+                        Responsive</p>
+                </article>
+                <article class="card">
+                    <p class="meta">Thinking in steps</p>
+                    <h3 class="mb-3 text-2xl font-bold">Programming basics</h3>
+                    <p class="mb-5 text-zero-black/80">Variables, conditions, and loops in our class exercises. I use
+                        small examples and paper notes to follow the logic.</p>
+                    <p class="mt-auto border-t border-zero-black/15 pt-4 text-sm text-zero-black/70">Variables ·
+                        Conditions · Loops</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="section" aria-labelledby="projects-title">
+            <div class="mb-12 grid items-end gap-6 md:grid-cols-2">
+                <div>
+                    <p class="label">Classwork &amp; practice</p>
+                    <h2 id="projects-title" class="heading">First attempts, kept here.</h2>
+                </div>
+                <p class="text-zero-black/80">Three small layouts that helped me practice the basics. Select a card to
+                    see the full image preview.</p>
+            </div>
+            <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+                <article
+                    class="group relative flex flex-col overflow-hidden rounded-2xl border border-zero-black/20 bg-white/20 transition-all duration-300 ease-out
+            hover:-translate-y-2 hover:bg-white/30 hover:shadow-xl has-[a:focus-visible]:outline-3 has-[a:focus-visible]:outline-offset-4 has-[a:focus-visible]:outline-zero-black">
+                    <img class="aspect-[8/5] w-full border-b border-zero-black/20 bg-zero-black/10 object-cover object-top"
+                        src="assets/images/profile-page.png"
+                        alt="A simple personal profile page with an introduction and interests" width="800" height="500"
+                        loading="lazy">
+                    <div class="flex flex-1 flex-col p-6">
+                        <p class="meta">HTML · CSS</p>
+                        <h3 class="mb-3 text-2xl font-bold tracking-tight">A Page About Me</h3>
+                        <p class="mb-6 text-zero-black/80">An introduction, a few interests, and links to my school
+                            activities. This was my first try at turning a sketch into a web page.</p>
+                        <a class="mt-auto text-sm font-semibold underline-offset-4 after:absolute after:inset-0 after:content-[''] group-hover:underline"
+                            href="assets/images/profile-page.png">View image preview →</a>
+                    </div>
+                </article>
+                <article
+                    class="group relative flex flex-col overflow-hidden rounded-2xl border border-zero-black/20 bg-white/20 transition-all duration-300 ease-out
+            hover:-translate-y-2 hover:bg-white/30 hover:shadow-xl has-[a:focus-visible]:outline-3 has-[a:focus-visible]:outline-offset-4 has-[a:focus-visible]:outline-zero-black">
+                    <img class="aspect-[8/5] w-full border-b border-zero-black/20 bg-zero-black/10 object-cover object-top"
+                        src="assets/images/restaurant-menu.png"
+                        alt="A restaurant menu with headings and a short list of meals" width="800" height="500"
+                        loading="lazy">
+                    <div class="flex flex-1 flex-col p-6">
+                        <p class="meta">HTML · Tailwind</p>
+                        <h3 class="mb-3 text-2xl font-bold tracking-tight">Lunch Break Menu</h3>
+                        <p class="mb-6 text-zero-black/80">A menu for an imaginary campus lunch spot. I practiced
+                            grouping information and lining up meal names and prices.</p>
+                        <a class="mt-auto text-sm font-semibold underline-offset-4 after:absolute after:inset-0 after:content-[''] group-hover:underline"
+                            href="assets/images/restaurant-menu.png">View image preview →</a>
+                    </div>
+                </article>
+                <article
+                    class="group relative flex flex-col overflow-hidden rounded-2xl border border-zero-black/20 bg-white/20 transition-all duration-300 ease-out
+            hover:-translate-y-2 hover:bg-white/30 hover:shadow-xl has-[a:focus-visible]:outline-3 has-[a:focus-visible]:outline-offset-4 has-[a:focus-visible]:outline-zero-black">
+                    <img class="aspect-[8/5] w-full border-b border-zero-black/20 bg-zero-black/10 object-cover object-top"
+                        src="assets/images/class-table.png" alt="An HTML table showing a weekly study schedule"
+                        width="800" height="500" loading="lazy">
+                    <div class="flex flex-1 flex-col p-6">
+                        <p class="meta">HTML · Tables</p>
+                        <h3 class="mb-3 text-2xl font-bold tracking-tight">My Study Week</h3>
+                        <p class="mb-6 text-zero-black/80">A weekly study table with room for breaks and homework. A
+                            small exercise in table headings, readable rows, and spacing.</p>
+                        <a class="mt-auto text-sm font-semibold underline-offset-4 after:absolute after:inset-0 after:content-[''] group-hover:underline"
+                            href="assets/images/class-table.png">View image preview →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CONTACTS -->
+        <section id="contacts" class="py-20" aria-labelledby="contacts-title">
+            <div class="grid items-center gap-10 rounded-3xl bg-zero-black p-8 text-ghost-green md:grid-cols-2 md:p-14">
+                <div>
+                    <p class="mb-4 font-mono text-sm text-ghost-green/70">Contacts</p>
+                    <h2 id="contacts-title" class="mb-6 text-4xl font-bold tracking-tight md:text-5xl">Got a class
+                        project<br>on your mind?</h2>
+                    <p class="max-w-lg text-ghost-green/80">
+                        I’m up for comparing notes, talking through an exercise, or hearing what you’re learning. Email
+                        is the easiest way to reach me.
+                    </p>
+                </div>
+                <div>
+                    <a class="inline-block break-all rounded-md bg-ghost-green px-6 py-4 text-lg font-bold text-zero-black hover:bg-ghost-green/80"
+                        href="mailto:stifanytradio83@gmail.com">stifanytradio83@gmail.com</a>
+                    <div class="mt-8 space-y-2 border-t border-ghost-green/20 pt-5 text-sm text-ghost-green/80">
+                        <p>Catarman, Cordova, Cebu, Philippines</p>
+                        <p>Cordova Public College · BSIT-1C</p>
+                        <p>Usually checking messages after class.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-zero-black/20">
+        <div
+            class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-6 py-6 text-sm text-zero-black/70">
+            <p>© 2026 Stifany Tradio · BSIT-1C · Catarman, Cordova, Cebu</p>
+            <a class="font-semibold text-zero-black underline underline-offset-4" href="#home">Back to top ↑</a>
+        </div>
+    </footer>
+</body>
+
+</html>
