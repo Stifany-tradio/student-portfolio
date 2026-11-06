@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stifany Tradio | Student Portfolio</title>
+    <link rel="stylesheet" href="style.css">
     <meta name="description"
         content="Stifany Tradio’s first-year IT portfolio: beginner web projects, class notes, and the skills she is learning.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -44,19 +45,6 @@
                 @apply mb-3 text-sm text-zero-black/70;
             }
         }
-
-        html { scroll-behavior: smooth; }
-        a:focus-visible { outline: 3px solid currentColor; outline-offset: 5px; }
-
-        .skip-link {
-            position: fixed; z-index: 60; top: -80px; left: 20px; padding: 10px 16px;
-            background-color: var(--color-zero-black); color: var(--color-ghost-green);
-        }
-        .skip-link:focus { top: 10px; }
-
-        @media (prefers-reduced-motion: reduce) {
-            html { scroll-behavior: auto; }
-        }
     </style>
 </head>
 
@@ -64,15 +52,27 @@
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header
-        class="fixed inset-x-0 top-0 z-50 h-36 border-b border-ghost-green/20 bg-zero-black/80 text-ghost-green backdrop-blur-lg sm:h-20">
+        class="fixed inset-x-0 top-0 z-50 h-20 border-b border-ghost-green/20 bg-zero-black/80 text-ghost-green backdrop-blur-lg sm:h-20">
         <div class="mx-auto flex h-full max-w-6xl flex-wrap items-center justify-between gap-5 px-6 py-5">
             <a class="text-2xl font-bold tracking-tight" href="#home">Stifany Tradio<span>.</span></a>
-            <nav class="flex w-full flex-wrap gap-6 sm:w-auto" aria-label="Main navigation">
-                <a class="nav-link" href="#home">Home</a>
-                <a class="nav-link" href="#about">About</a>
-                <a class="nav-link" href="#skills">Skills</a>
-                <a class="nav-link" href="#projects">Projects</a>
-                <a class="nav-link" href="#contacts">Contacts</a>
+            <nav class="navigation" aria-label="Main navigation">
+
+                <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+                <label for="menu-toggle" class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+
+                <div class="nav-links">
+                    <a class="nav-link" href="#home">Home</a>
+                    <a class="nav-link" href="#about">About</a>
+                    <a class="nav-link" href="#skills">Skills</a>
+                    <a class="nav-link" href="#projects">Projects</a>
+                    <a class="nav-link" href="#contacts">Contacts</a>
+                </div>
+
             </nav>
         </div>
     </header>
@@ -193,10 +193,9 @@
                 <p class="text-zero-black/80">Three small layouts that helped me practice the basics. Select a card to
                     see the full image preview.</p>
             </div>
-            <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+            <div class="projects-carousel">
                 <article
-                    class="group relative flex flex-col overflow-hidden rounded-2xl border border-zero-black/20 bg-white/20 transition-all duration-300 ease-out
-            hover:-translate-y-2 hover:bg-white/30 hover:shadow-xl has-[a:focus-visible]:outline-3 has-[a:focus-visible]:outline-offset-4 has-[a:focus-visible]:outline-zero-black">
+                    class="project-card group relative flex flex-col overflow-hidden rounded-2xl border border-zero-black/20 bg-white/20 transition-all duration-300 ease-out hover:-translate-y-2 hover:bg-white/30 hover:shadow-xl">
                     <img class="aspect-[8/5] w-full border-b border-zero-black/20 bg-zero-black/10 object-cover object-top"
                         src="assets/images/aboutmestif.jpg"
                         alt="A simple personal profile page with an introduction and interests" width="800" height="500"
@@ -216,8 +215,7 @@
                     </div>
                 </article>
                 <article
-                    class="group relative flex flex-col overflow-hidden rounded-2xl border border-zero-black/20 bg-white/20 transition-all duration-300 ease-out
-    hover:-translate-y-2 hover:bg-white/30 hover:shadow-xl has-[a:focus-visible]:outline-3 has-[a:focus-visible]:outline-offset-4 has-[a:focus-visible]:outline-zero-black">
+                    class="project-card group relative flex flex-col overflow-hidden rounded-2xl border border-zero-black/20 bg-white/20 transition-all duration-300 ease-out hover:-translate-y-2 hover:bg-white/30 hover:shadow-xl">
 
                     <img class="aspect-[8/5] w-full border-b border-zero-black/20 bg-zero-black/10 object-cover object-top"
                         src="assets/images/programmingbasics.png"
@@ -243,8 +241,7 @@
                     </div>
                 </article>
                 <article
-                    class="group relative flex flex-col overflow-hidden rounded-2xl border border-zero-black/20 bg-white/20 transition-all duration-300 ease-out
-            hover:-translate-y-2 hover:bg-white/30 hover:shadow-xl has-[a:focus-visible]:outline-3 has-[a:focus-visible]:outline-offset-4 has-[a:focus-visible]:outline-zero-black">
+                    class="project-card group relative flex flex-col overflow-hidden rounded-2xl border border-zero-black/20 bg-white/20 transition-all duration-300 ease-out hover:-translate-y-2 hover:bg-white/30 hover:shadow-xl">
                     <img class="aspect-[8/5] w-full border-b border-zero-black/20 bg-zero-black/10 object-cover object-top"
                         src="assets/images/crsr.jpg" alt="An HTML table showing a weekly study schedule" width="800"
                         height="500" loading="lazy">
