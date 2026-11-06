@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <meta name="description"
         content="Stifany Tradio’s first-year IT portfolio: beginner web projects, class notes, and the skills she is learning.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -70,6 +71,7 @@
                     <a class="nav-link" href="#about">About</a>
                     <a class="nav-link" href="#skills">Skills</a>
                     <a class="nav-link" href="#projects">Projects</a>
+                    <a class="nav-link" href="#certificates">Certificates</a>
                     <a class="nav-link" href="#contacts">Contacts</a>
                 </div>
 
@@ -188,10 +190,8 @@
             <div class="mb-12 grid items-end gap-6 md:grid-cols-2">
                 <div>
                     <p class="label">Classwork &amp; practice</p>
-                    <h2 id="projects-title" class="heading">First attempts, kept here.</h2>
+                    <h2 id="projects-title" class="heading">Projects</h2>
                 </div>
-                <p class="text-zero-black/80">Three small layouts that helped me practice the basics. Select a card to
-                    see the full image preview.</p>
             </div>
             <div class="projects-carousel">
                 <article
@@ -208,9 +208,20 @@
                             I focused on learning basic HTML and experimenting with how to structure
                             and display content on a webpage.
                         </p>
-                        <a class="mt-auto text-sm font-semibold underline-offset-4 after:absolute after:inset-0 after:content-[''] group-hover:underline"
-                            href="assets/images/aboutmestif.jpg" target="_blank" rel="noopener noreferrer">
-                            View image preview →
+                        <a class="mt-auto flex items-center justify-between rounded-lg
+                            border border-zero-black/20 bg-zero-black/5
+                            px-4 py-3 text-sm font-semibold
+                            transition-all duration-300
+                            hover:bg-zero-black hover:text-ghost-green" href="assets/images/aboutmestif.jpg"
+                            target="_blank" rel="noopener noreferrer">
+
+                            <span class="flex items-center gap-2">
+                                <i class="fa-regular fa-image"></i>
+                                View project preview
+                            </span>
+
+                            <i class="fa-solid fa-arrow-right transition-transform duration-300
+                            group-hover:translate-x-1.5"></i>
                         </a>
                     </div>
                 </article>
@@ -234,9 +245,20 @@
                             my problem-solving skills through simple C programs.
                         </p>
 
-                        <a class="mt-auto text-sm font-semibold underline-offset-4 after:absolute after:inset-0 after:content-[''] group-hover:underline"
-                            href="assets/images/programmingbasics.png" target="_blank" rel="noopener noreferrer">
-                            View image preview →
+                        <a class="mt-auto flex items-center justify-between rounded-lg
+                            border border-zero-black/20 bg-zero-black/5
+                            px-4 py-3 text-sm font-semibold
+                            transition-all duration-300
+                            hover:bg-zero-black hover:text-ghost-green" href="assets/images/programmingbasics.png"
+                            target="_blank" rel="noopener noreferrer">
+
+                            <span class="flex items-center gap-2">
+                                <i class="fa-regular fa-image"></i>
+                                View project preview
+                            </span>
+
+                            <i class="fa-solid fa-arrow-right transition-transform duration-300
+                            group-hover:translate-x-1.5"></i>
                         </a>
                     </div>
                 </article>
@@ -252,45 +274,119 @@
                             A computer repair service form designed to organize customer information,
                             computer issues, and repair requests in a clear and structured layout.
                         </p>
-                        <a class="mt-auto text-sm font-semibold underline-offset-4 after:absolute after:inset-0 after:content-[''] group-hover:underline"
-                            href="assets/images/crsr.jpg" target="_blank" rel="noopener noreferrer">
-                            View image preview →
+                        <a class="mt-auto flex items-center justify-between rounded-lg
+                            border border-zero-black/20 bg-zero-black/5
+                            px-4 py-3 text-sm font-semibold
+                            transition-all duration-300
+                            hover:bg-zero-black hover:text-ghost-green" href="assets/images/crsr.jpg" target="_blank"
+                            rel="noopener noreferrer">
+
+                            <span class="flex items-center gap-2">
+                                <i class="fa-regular fa-image"></i>
+                                View project preview
+                            </span>
+
+                            <i class="fa-solid fa-arrow-right transition-transform duration-300
+                            group-hover:translate-x-1.5"></i>
                         </a>
                     </div>
                 </article>
             </div>
         </section>
 
+        <!-- CERTIFICATES -->
+        <section id="certificates" class="section" aria-labelledby="certificates-title">
+            <div class="mb-12">
+                <p class="label">Courses & achievements</p>
+                <h2 id="certificates-title" class="heading">Certificates</h2>
+                <p class="mt-4 max-w-xl text-zero-black/80">
+                    A record of the courses I’ve completed as I continue learning
+                    programming and developing my IT skills.
+                </p>
+            </div>
+
+            <article
+                class="grid items-center gap-8 rounded-2xl border border-zero-black/20 bg-white/20 p-5 sm:p-8 md:grid-cols-2">
+                <a href="https://www.sololearn.com/en/certificates/CC-AHQEFYUT" target="_blank"
+                    rel="noopener noreferrer" class="group block overflow-hidden rounded-xl border border-zero-black/20"
+                    aria-label="View Introduction to C certificate on SoloLearn">
+                    <img src="assets/images/sololearn.jpg"
+                        alt="SoloLearn Course Certificate for Introduction to C, awarded to Stifany Tradio"
+                        class="w-full transition duration-300 group-hover:scale-105" loading="lazy">
+                </a>
+
+                <div>
+                    <p class="meta">SoloLearn · Course Certificate</p>
+
+                    <h3 class="mb-4 text-2xl font-bold tracking-tight">
+                        Introduction to C
+                    </h3>
+
+                    <p class="mb-6 text-zero-black/80">
+                        Successfully completed the Introduction to C course,
+                        demonstrating theoretical and practical understanding
+                        of the C programming language.
+                    </p>
+
+                    <p class="mb-6 text-sm text-zero-black/70">
+                        Issued October 2, 2026
+                    </p>
+
+                    <a href="https://www.sololearn.com/en/certificates/CC-AHQEFYUT" target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-block rounded-md bg-zero-black px-5 py-3 font-semibold text-ghost-green transition hover:bg-zero-black/80">
+                        Verify Certificate →
+                    </a>
+                </div>
+            </article>
+        </section>
+
         <!-- CONTACTS -->
         <section id="contacts" class="py-20" aria-labelledby="contacts-title">
-            <div class="grid items-center gap-10 rounded-3xl bg-zero-black p-8 text-ghost-green md:grid-cols-2 md:p-14">
+            <div
+                class="-mx-6 grid items-center gap-8 rounded-none bg-zero-black p-6 text-ghost-green sm:mx-0 sm:rounded-3xl sm:p-8 md:grid-cols-2 md:gap-10 md:p-14">
                 <div>
-                    <p class="mb-4 font-mono text-sm text-ghost-green/70">Contacts</p>
-                    <h2 id="contacts-title" class="mb-6 text-4xl font-bold tracking-tight md:text-5xl">Got a class
-                        project<br>on your mind?</h2>
+                    <p class="mb-4 font-mono text-sm text-ghost-green/70">Contact Me</p>
+                    <h2 id="contacts-title" class="mb-6 text-4xl font-bold tracking-tight md:text-5xl">
+                        Let's connect<br>and collaborate.
+                    </h2>
                     <p class="max-w-lg text-ghost-green/80">
-                        I’m up for comparing notes, talking through an exercise, or hearing what you’re learning. Email
-                        is the easiest way to reach me.
+                        Feel free to reach out through email or check out my GitHub profile to see my projects and
+                        coding journey.
                     </p>
                 </div>
-                <div>
-                    <a class="inline-block break-all rounded-md bg-ghost-green px-6 py-4 text-lg font-bold text-zero-black hover:bg-ghost-green/80"
-                        href="mailto:stifanytradio83@gmail.com">stifanytradio83@gmail.com</a>
-                    <div class="mt-8 space-y-2 border-t border-ghost-green/20 pt-5 text-sm text-ghost-green/80">
+
+                <div class="flex flex-col items-start gap-4">
+                    <a class="inline-block rounded-md border border-ghost-green px-6 py-4 text-lg font-bold text-ghost-green transition hover:bg-ghost-green hover:text-zero-black"
+                        href="mailto:stifanytradio83@gmail.com">
+                        <i class="fa-solid fa-envelope mr-2"></i>
+                        stifanytradio83@gmail.com
+                    </a>
+
+                    <a class="inline-block rounded-md border border-ghost-green px-6 py-4 text-lg font-bold text-ghost-green transition hover:bg-ghost-green hover:text-zero-black"
+                        href="https://github.com/Stifany-tradio" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github mr-2"></i>
+                        Visit My GitHub
+                    </a>
+
+                    <div class="mt-4 space-y-2 border-t border-ghost-green/20 pt-5 text-sm text-ghost-green/80">
                         <p>Catarman, Cordova, Cebu, Philippines</p>
                         <p>Cordova Public College · BSIT-1C</p>
-                        <p>Usually checking messages after class.</p>
                     </div>
                 </div>
             </div>
         </section>
+
     </main>
 
     <footer class="border-t border-zero-black/20">
         <div
             class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-3 px-6 py-6 text-sm text-zero-black/70">
-            <p>© 2026 Stifany Tradio · BSIT-1C · Catarman, Cordova, Cebu</p>
-            <a class="font-semibold text-zero-black underline underline-offset-4" href="#home">Back to top ↑</a>
+            <p>© 2026 Stifany Tradio</p>
+            <a class="flex h-10 w-10 items-center justify-center rounded-full border border-zero-black/30 text-zero-black transition-all duration-300 hover:bg-zero-black hover:text-ghost-green"
+                href="#home" title="Back to top" aria-label="Back to top">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
         </div>
     </footer>
 </body>
